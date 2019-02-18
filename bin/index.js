@@ -5,11 +5,13 @@
 const path = require("path");
 const fs = require("fs");
 const chalk = require("chalk");
-const Engine = require("./engine");
+const VueEngine = require("./engines/vue");
+const PugEngine = require("./engines/pug");
 
 const args = process.argv;
 const fileName = args[args.length - 1];
 const filePath = path.join(process.cwd(), fileName);
+let engine;
 
 const _throwAndExit = msg => {
   console.log(chalk.red(msg));
@@ -17,11 +19,13 @@ const _throwAndExit = msg => {
 };
 
 if (!fs.existsSync(filePath)) _throwAndExit(`${fileName} was not found`);
-if (!filePath.includes(".vue")) _throwAndExit(`${fileName} was not found`);
 
-const engine = Engine(filePath);
+if (filePath.includes(".vue")) engine = VueEngine(filePath);
+else if (filePath.includes(".pug")) engine = PugEngine(filePath);
+else _throwAndExit(`${fileName} was not found`);
 
-if (!engine.hasPugTemplate()) _throwAndExit(`${fileName} does not have a pug template`);
+if (engine.name === "vue" && !engine.canCompile())
+  _throwAndExit(`${fileName} does not have a pug template`);
 console.log(chalk.green(engine.convertTemplate()));
 engine.saveToFile();
 process.exit();
