@@ -24,7 +24,7 @@ if (filePath.includes(".vue")) engine = VueEngine(filePath);
 else if (filePath.includes(".pug")) engine = PugEngine(filePath);
 else _throwAndExit(`${fileName} was not found`);
 
-if (engine.name === "vue" && !engine.canCompile())
+if (engine.name === "vue" && !engine.hasVueTemplate())
   _throwAndExit(`${fileName} does not have a pug template`);
 console.log(chalk.green(engine.convertTemplate()));
 engine.saveToFile();
