@@ -7,7 +7,8 @@
     "pugToHtml": "bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/",
+    "updateSnapshot": "UPDATE_SNAPSHOT=1 npm test"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,9 @@
   "homepage": "https://github.com/dperrymorrow/vue-pug-to-html#readme",
   "dependencies": {
     "chalk": "^2.4.1",
-    "pug": "^2.0.3"
+    "jade": "^1.11.0",
+    "pug": "^2.0.3",
+    "pug-walk": "^1.1.7"
   },
   "devDependencies": {
     "eslint": "5.9.0",
@@ -30,6 +33,7 @@
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-unicorn": "6.0.1",
+    "mocha": "^6.1.4",
     "prettier": "1.14.3"
   }
 }
