@@ -1,6 +1,6 @@
 {
-  "name": "vue-pug-to-html",
-  "version": "1.2.0",
+  "name": "pug-to-html",
+  "version": "1.0.0",
   "description": "convert vue files templates from pug to html",
   "main": "index.js",
   "bin": {
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dperrymorrow/vue-pug-to-html.git"
+    "url": "git+https://github.com/plaidev/pug-to-html.git"
   },
-  "author": "David Morrow",
+  "author": "PLAID, inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dperrymorrow/vue-pug-to-html/issues"
+    "url": "https://github.com/plaidev/pug-to-html/issues"
   },
-  "homepage": "https://github.com/dperrymorrow/vue-pug-to-html#readme",
+  "homepage": "https://github.com/plaidev/pug-to-html#readme",
   "dependencies": {
     "chalk": "^2.4.1",
     "jade": "^1.11.0",
