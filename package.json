@@ -1,5 +1,5 @@
 {
-  "name": "pug-to-html",
+  "name": "@plaidev/pug-to-html",
   "version": "1.0.0",
   "description": "convert vue files templates from pug to html",
   "main": "index.js",
