@@ -27,7 +27,7 @@ pugToHtml your-vue-file.vue
 
 ## :muscle: Contribution
 
-- Fork the repository from [plaidev/pug-to-htlm](https://github.com/plaidev/pug-to-html) !
+- Fork the repository from [plaidev/pug-to-html](https://github.com/plaidev/pug-to-html) !
 - Create your topic branch from `master`: `git branch my-new-topic master`
 - Add codes and pass tests !
 - Commit your changes: `git commit -am 'Add some topic'`
