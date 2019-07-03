@@ -1,26 +1,24 @@
 "use strict";
 
-const pug = require("pug");
+const jade = require("jade");
 const fs = require("fs");
-const plugin = require("./plugin")(require("pug-walk"));
 
 module.exports = function(filePath) {
   const contents = fs.readFileSync(filePath, "utf-8");
 
   return {
-    name: "pug",
+    name: "jade",
 
     convertTemplate() {
       console.log(filePath, contents);
-      return pug.render(contents, {
+      return jade.render(contents, {
         doctype: "html",
-        pretty: true,
-        plugins: [plugin]
+        pretty: true
       });
     },
 
     saveToFile(html) {
-      fs.writeFileSync(filePath.replace(".pug", ".html"), html);
+      fs.writeFileSync(filePath.replace(".jade", ".html"), html);
     },
   };
 };
