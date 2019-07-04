@@ -23,6 +23,8 @@ pugToHtml your-vue-file.vue
 - Support `.jade` file
 - Support `<template lang="jade">`
 - Add `doctype: "html"` option (because https://github.com/yyx990803/pug-plain-loader/blob/d2bc7c4ee84096fe94dd0c8778f3f6d860c2d6c3/index.js#L7)
+- correct converting `<` and `>`  in attributes.
+  - Example `<div v-if="Math.random() > 0.5">…</div>`
 
 
 ## :muscle: Contribution
