@@ -33,7 +33,7 @@
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-unicorn": "6.0.1",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "prettier": "1.14.3"
   }
 }
